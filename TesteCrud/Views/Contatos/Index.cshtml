@@ -1,0 +1,61 @@
+﻿@model IEnumerable<TesteCrud.Models.Contato>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adicionar </a>
+    <a asp-action="FiltrarPorCidade" class="btn btn-success">Filtrar por Cidade</a>
+</p>
+
+@if (ViewBag.relatorio != null)
+{
+    <h3>Relatório</h3>
+    <div class="alert alert-info" role="alert">
+        @Html.Raw(ViewBag.relatorio)
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
