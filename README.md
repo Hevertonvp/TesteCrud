@@ -1,5 +1,8 @@
 # TesteCrud
-CRUD em C# ASP NET CORE MVC
+
+CRUD básico C# ASP NET CORE MVC, realizado para um teste de faculdade.
+
+
 Para Executar o projeto, é necessário mudar a string de conexão encontrada no arquivo appsettings.json, substituindo user, password e database:
 "TesteCrudContext": "server=localhost;userid=root;password=admin;database=TestCrud". 
 
