@@ -1,6 +1,6 @@
 # TesteCrud
 
-CRUD básico C# ASP NET CORE MVC, realizado para um teste de faculdade.
+CRUD básico C# ASP NET CORE MVC, realizado para um teste de faculdade. Meu primeiro projeto em c#, para o segundo semestre.
 
 
 Para Executar o projeto, é necessário mudar a string de conexão encontrada no arquivo appsettings.json, substituindo user, password e database:
